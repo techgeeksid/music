@@ -3,7 +3,7 @@ package wiki.sid.music;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class tags extends AppCompatActivity {
+public class Tags extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

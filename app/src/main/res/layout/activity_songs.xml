@@ -5,6 +5,14 @@
     android:id="@+id/activity_songs"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="wiki.sid.music.songs">
+    tools:context="wiki.sid.music.Songs">
+    <TextView
+        android:text="This songs list"
+        android:layout_width="237dp"
+        android:layout_height="42dp"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="49dp"
+        tools:layout_editor_absoluteY="49dp"
+        android:id="@+id/textV1" />
 
 </android.support.constraint.ConstraintLayout>

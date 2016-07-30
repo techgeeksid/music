@@ -3,7 +3,7 @@ package wiki.sid.music;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class artists extends AppCompatActivity {
+public class Artists extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

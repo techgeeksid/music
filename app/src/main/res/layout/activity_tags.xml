@@ -5,7 +5,7 @@
     android:id="@+id/activity_tags"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="wiki.sid.music.tags">
+    tools:context="wiki.sid.music.Tags">
 
     <TextView
         android:text="This songs are based on tags"
