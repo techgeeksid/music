@@ -17,17 +17,6 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="play"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button"
-        android:textColor="#FFFFFF"
-        android:background="#1976D2"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="28dp" />
-
-    <Button
         android:text="Tags"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,30 +26,33 @@
         android:layout_marginTop="40dp"
         android:textColor="#FFFFFF"
         android:background="#1976D2"
-        android:id="@+id/button2" />
+        android:id="@+id/tagss"
+        android:onClick="tag"/>
 
     <Button
         android:text="Songs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button2"
+        android:layout_alignTop="@+id/tagss"
         android:layout_alignRight="@+id/seekBar"
         android:layout_alignEnd="@+id/seekBar"
         android:textColor="#FFFFFF"
         android:background="#1976D2"
-        android:id="@+id/button3" />
+        android:id="@+id/songss"
+        android:onClick="song"/>
 
     <Button
         android:text="Artist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button2"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignStart="@+id/button2"
+        android:layout_below="@+id/tagss"
+        android:layout_alignLeft="@+id/tagss"
+        android:layout_alignStart="@+id/tagss"
         android:layout_marginTop="22dp"
         android:textColor="#FFFFFF"
         android:background="#1976D2"
-        android:id="@+id/button4" />
+        android:id="@+id/art"
+        android:onClick="artist"/>
 
     <Button
         android:text="Albums"
@@ -68,18 +60,100 @@
         android:layout_height="wrap_content"
         android:textColor="#FFFFFF"
         android:background="#1976D2"
-        android:id="@+id/button5"
-        android:layout_alignBaseline="@+id/button4"
-        android:layout_alignBottom="@+id/button4"
-        android:layout_alignLeft="@+id/button3"
-        android:layout_alignStart="@+id/button3" />
+        android:id="@+id/alb"
+        android:layout_alignBaseline="@+id/art"
+        android:layout_alignBottom="@+id/art"
+        android:layout_alignLeft="@+id/songss"
+        android:layout_alignStart="@+id/songss"
+        android:onClick="album"/>
 
     <TextView
         android:text="choose one button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button2"
+        android:layout_below="@+id/tagss"
         android:layout_centerHorizontal="true"
         android:id="@+id/textView" />
+
+    <Button
+        android:text="play/pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:textColor="#FFFFFF"
+        android:background="#1976D2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:text="PREV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_alignTop="@+id/button"
+        android:layout_toStartOf="@+id/textView"
+        android:id="@+id/button3"
+        android:textColor="#FFFFFF"
+        android:background="#1976D2"/>
+
+    <Button
+        android:text="NEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:id="@+id/button2"
+        android:textColor="#FFFFFF"
+        android:background="#1976D2"
+        android:layout_alignTop="@+id/button"
+        android:layout_alignRight="@+id/seekBar"
+        android:layout_alignEnd="@+id/seekBar" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:layout_below="@+id/art"
+        android:layout_alignLeft="@+id/art"
+        android:layout_alignStart="@+id/art"
+        android:layout_alignRight="@+id/alb"
+        android:layout_alignEnd="@+id/alb">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="87dp"
+            app:srcCompat="@android:drawable/ic_menu_gallery"
+            android:layout_below="@+id/art"
+            android:layout_alignLeft="@+id/button3"
+            android:layout_alignStart="@+id/button3"
+            android:id="@+id/imageButton" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+            android:text=" Album name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_toRightOf="@+id/imageButton"
+            android:layout_toEndOf="@+id/imageButton"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:id="@+id/textView2"
+            android:layout_alignTop="@+id/imageButton" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Song name"
+                android:textSize="25sp"
+                android:id="@+id/textView3"
+                android:layout_below="@+id/textView2"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </LinearLayout>
 
 </RelativeLayout>
